@@ -8,6 +8,7 @@ class Hobbies(models.Model):
     
     hobby_name = models.CharField(max_length=200)
     hobby_desc = models.CharField(max_length=200)
+    hobby_image = models.CharField(max_length=500, default="https://th.bing.com/th/id/OIP.kcnWCTmXz1gblj3emSQBDAHaHK?rs=1&pid=ImgDetMain")
 
 class Portfolio(models.Model):
 
@@ -16,3 +17,4 @@ class Portfolio(models.Model):
     
     portfolio_name = models.CharField(max_length=200)
     portfolio_desc = models.CharField(max_length=200)
+    portfolio_image = models.CharField(max_length=500, default="https://th.bing.com/th/id/OIP.0peFLquqi8FFO0e9R3aVyQHaFj?rs=1&pid=ImgDetMain")
