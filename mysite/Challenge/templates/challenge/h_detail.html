@@ -1,0 +1,21 @@
+{% extends 'challenge/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% block body %}
+<div class="container mt -5">
+  <div class="text-center">
+    <h2 class="font-weight-bold">{{ hobby.hobby_name }}</h2>
+    <img src="{{ hobby.hobby_image }}" class="img-fluid rounded my-4" style="max-height: 300px;" alt="{{ hobby.hobby_name }}">
+    <p class="lead">{{ hobby.hobby_desc }}</p>
+    <a href="{% url 'challenge:hobbies' %}" class="btn btn-secondary mt-3">Back to List</a>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>

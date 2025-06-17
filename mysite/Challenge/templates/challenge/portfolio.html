@@ -1,0 +1,29 @@
+{% extends 'challenge/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% block body %}   
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">My Portfolio</h2>
+  {% for item in project_list %}
+  <div class="row align-items-center mb-4 p-3 border rounded shadow-sm">
+    <div class="col-md-3">
+      <img class="img-fluid rounded" src="{{ item.portfolio_image }}" alt="{{ item.portfolio_name }}">
+    </div>
+    <div class="col-md-6">
+      <h4 class="font-weight-bold">{{ item.portfolio_name }}</h4>
+    </div>
+    <div class="col-md-3 text-center">
+      <a href="{% url 'challenge:p_detail' item.id %}" class="btn btn-primary btn-block mt-3 mt-md-0">View Details</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
