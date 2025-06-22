@@ -9,4 +9,7 @@ urlpatterns = [
     path('portfolio', views.portfolio, name="portfolio"),
     path('hobbies', views.hobbies, name="hobbies"),
     path('contact', views.contact, name="contact"),
+    path('update/<int:id>', views.update_portfolio, name="update_portfolio"),
+    path('add', views.create_portfolio, name="create_portfolio"),
+    path('delete/<int:id>', views.delete_portfolio, name="delete_portfolio"),
 ]

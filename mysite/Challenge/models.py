@@ -18,3 +18,12 @@ class Portfolio(models.Model):
     portfolio_name = models.CharField(max_length=200)
     portfolio_desc = models.CharField(max_length=200)
     portfolio_image = models.CharField(max_length=500, default="https://th.bing.com/th/id/OIP.0peFLquqi8FFO0e9R3aVyQHaFj?rs=1&pid=ImgDetMain")
+
+class Contact(models.Model):
+
+    def __str__(self):
+            return self.contact_name
+    
+    contact_name = models.CharField(max_length=200)
+    contact_email = models.CharField(max_length=200)
+    contact_message = models.CharField(max_length=500)
