@@ -13,6 +13,9 @@
     <h2 class="font-weight-bold">{{ project.portfolio_name }}</h2>
     <img src="{{ project.portfolio_image }}" class="img-fluid rounded my-4" style="max-height: 300px;" alt="{{ project.portfolio_name }}">
     <p class="lead">{{ project.portfolio_desc }}</p>
+    {% if user.is_authenticated %}
+    <a href="{% url 'challenge:delete_portfolio' project.id %}" class="btn btn-warning mt-3">Delete</a>
+    {% endif %}
     <a href="{% url 'challenge:portfolio' %}" class="btn btn-secondary mt-3">Back to List</a>
   </div>
 </div>
